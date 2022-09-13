@@ -6,5 +6,78 @@
 	<title>Sign-up Form</title>
 </head>
 <body>
+	<div class="container">
+    <section>
+      <div>
+        <img src="images/odin-lined.png" width="380" height="508" />
+        <span>odin</span>
+      </div>
+      <p>Photo by <a href="#">Halie West</a> on <a href="#">Unsplash</a></p>
+    </section>
+
+    <main>
+      <header>
+        <p>
+          This is not a real online service. You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up
+          <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </header>
+
+      <article>
+        <fieldset>
+          <legend>Let's do this</legend>
+          <form id="sign-up-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">first name</label>
+                <input type="text" id="first-name" />
+                <small class="form-feedback"></small>
+              </div>
+              <div class="form-group">
+                <label for="last-name">last name</label>
+                <input type="text" id="last-name" />
+                <small class="form-feedback"></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" id="email" />
+                <small class="form-feedback"></small>
+              </div>
+              <div class="form-group">
+                <label for="phone-number">phone number</label>
+                <input type="tel" id="phone-number" />
+                <small class="form-feedback"></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">password</label>
+                <input type="password" id="password" />
+                <small class="form-feedback"></small>
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">confirm password</label>
+                <input type="text" id="confirm-password" />
+                <small class="form-feedback"></small>
+              </div>
+            </div>
+          </form>
+        </fieldset>
+      </article>
+
+      <footer>
+        <div>
+          <button form="sign-up-form" type="submit">create account</button>
+          <p>Already have an account? <a href="#">Log in</a>
+        </div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
