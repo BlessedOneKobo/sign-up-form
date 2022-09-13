@@ -4,6 +4,8 @@
   --input-border-color: #e5e7eb;
   --input-focus-border-color: #2c9cf8;
   --input-focus-box-shadow-color: #ccc;
+  --sidebar-width: 30%;
+  --main-width: calc(100% - var(----sidebar-width));
   --main-left-padding: 2rem;
   --main-right-padding: 14rem;
   --main-vertical-padding: 1.5rem;
@@ -36,17 +38,22 @@ body {
 
 section {
   height: 100%;
-  flex-basis: 45%;
+  flex: 0 0 var(--sidebar-width);
   background-image: url("images/halie-west-25xggax4bSA-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   padding-top: 10%;
+}
+@media (min-width: 992px) {
+  section {
+    display: flex;
+  }
 }
 section,
 section a {
@@ -75,6 +82,7 @@ section p {
 
 main {
   background-color: #f9f9f9;
+  flex: 0 0 var(--main-width);
 }
 
 main header {
@@ -95,14 +103,11 @@ main article {
   padding-left: var(--main-left-padding);
 }
 
-main fieldset {
-  border: none;
-  padding-top: 1.5rem;
-}
-
-main legend {
+main h1 {
   font-weight: bold;
   letter-spacing: 0.02rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 main form {
