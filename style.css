@@ -1,0 +1,177 @@
+:root {
+  --semi-transparent-black: rgba(0, 0, 0, 0.5);
+  --button-bg: #596d48;
+  --input-border-color: #e5e7eb;
+  --input-focus-border-color: #2c9cf8;
+  --input-focus-box-shadow-color: #ccc;
+  --main-left-padding: 2rem;
+  --main-right-padding: 14rem;
+  --main-vertical-padding: 1.5rem;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("fonts/norse-bold-webfont.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+section {
+  height: 100%;
+  flex-basis: 45%;
+  background-image: url("images/halie-west-25xggax4bSA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10%;
+}
+section,
+section a {
+  color: #fff;
+}
+section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--semi-transparent-black);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+section div > img {
+  width: 25%;
+  height: auto;
+}
+section div > span {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: "Norse", sans-serif;
+}
+section p {
+  font-size: 0.75rem;
+}
+
+main {
+  background-color: #f9f9f9;
+}
+
+main header {
+  --padding-top: 3.5rem;
+  --padding-bottom: calc(var(--padding-top) / 2);
+  font-weight: bold;
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  padding-left: var(--main-left-padding);
+  padding-right: var(--main-right-padding);
+}
+
+main article {
+  background-color: #fff;
+  padding-top: var(--main-vertical-padding);
+  padding-right: var(--main-right-padding);
+  padding-bottom: var(--main-vertical-padding);
+  padding-left: var(--main-left-padding);
+}
+
+main fieldset {
+  border: none;
+  padding-top: 1.5rem;
+}
+
+main legend {
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+}
+
+main form {
+  width: 75%;
+}
+
+main .form-row {
+  display: flex;
+  gap: 10%;
+}
+main .form-row:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
+
+main label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+}
+
+main input {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  width: 15rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+main input:focus {
+  outline: none;
+  border-color: var(--input-focus-border-color);
+  box-shadow: 2px 2px 4px 0px var(--input-focus-box-shadow-color);
+}
+
+main footer {
+  padding-left: var(--main-left-padding);
+  padding-right: var(--main-right-padding);
+  padding-top: var(--main-vertical-padding);
+  padding-bottom: var(--main-vertical-padding);
+  font-size: 0.85rem;
+}
+
+main footer button {
+  text-transform: capitalize;
+  padding: 0.5rem 1.75rem;
+  border: 1px solid var(--button-bg);
+  border-radius: 0.4rem;
+  background-color: var(--button-bg);
+  color: #fff;
+  letter-spacing: 0.02rem;
+  box-shadow: 2px 2px 4px 0px #ccc;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+main footer button:hover {
+  background-color: #fff;
+  color: var(--button-bg);
+}
+main footer p {
+  margin-top: 1.25rem;
+}
+main footer a {
+  text-decoration: none;
+  color: var(--button-bg);
+  font-weight: bold;
+}
+main footer a:hover {
+  text-decoration: underline;
+}
