@@ -38,7 +38,7 @@ body {
 
 section {
   height: 100%;
-  flex: 0 0 var(--sidebar-width);
+  flex: 1 0 var(--sidebar-width);
   background-image: url("images/halie-west-25xggax4bSA-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,7 +82,7 @@ section p {
 
 main {
   background-color: #f9f9f9;
-  flex: 0 0 var(--main-width);
+  flex: 1 0 var(--main-width);
 }
 
 main header {
@@ -112,14 +112,14 @@ main h1 {
 
 main form {
   width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
 main .form-row {
   display: flex;
   gap: 10%;
-}
-main .form-row:not(:first-of-type) {
-  margin-top: 1.25rem;
 }
 
 main label {
@@ -137,6 +137,13 @@ main input {
   border: 1px solid var(--input-border-color);
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out;
+}
+
+main input:required + .form-feedback:before {
+  content: "* Required";
+  color: red;
+  display: block;
+  margin-top: 0.4rem;
 }
 
 main input:focus {
@@ -164,13 +171,14 @@ main footer button {
   box-shadow: 2px 2px 4px 0px #ccc;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  margin-bottom: 0.5rem;
 }
 main footer button:hover {
   background-color: #fff;
   color: var(--button-bg);
 }
 main footer p {
-  margin-top: 1.25rem;
+  margin: 0;
 }
 main footer a {
   text-decoration: none;
