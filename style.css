@@ -8,7 +8,8 @@
   --main-width: calc(100% - var(----sidebar-width));
   --main-left-padding: 2rem;
   --main-right-padding: 14rem;
-  --main-vertical-padding: 1.5rem;
+  --main-vertical-padding: 2rem;
+  --gray-bg: #f9f9f9;
 }
 
 @font-face {
@@ -34,6 +35,7 @@ body {
 .container {
   display: flex;
   height: 100%;
+  overflow: hidden;
 }
 
 section {
@@ -81,8 +83,11 @@ section p {
 }
 
 main {
-  background-color: #f9f9f9;
   flex: 1 0 var(--main-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
 }
 
 main header {
@@ -93,6 +98,7 @@ main header {
   padding-bottom: var(--padding-bottom);
   padding-left: var(--main-left-padding);
   padding-right: var(--main-right-padding);
+  background-color: var(--gray-bg);
 }
 
 main article {
@@ -108,6 +114,7 @@ main h1 {
   letter-spacing: 0.02rem;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 main form {
@@ -158,6 +165,7 @@ main footer {
   padding-top: var(--main-vertical-padding);
   padding-bottom: var(--main-vertical-padding);
   font-size: 0.85rem;
+  background-color: var(--gray-bg);
 }
 
 main footer button {
