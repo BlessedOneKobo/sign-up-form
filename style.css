@@ -147,14 +147,24 @@ main input {
   transition: all 0.2s ease-in-out;
 }
 
-main input:required + .form-feedback:before {
-  content: "* Required";
+main input:invalid {
+  outline: none;
+  border-color: red;
   color: red;
+}
+.form-feedback {
   display: block;
   margin-top: 0.4rem;
 }
+main input:invalid + .form-feedback {
+  color: red;
+  visibility: visible;
+}
+main input:valid + .form-feedback {
+  visibility: hidden;
+}
 
-main input:focus {
+main input:focus:not(:invalid) {
   outline: none;
   border-color: var(--input-focus-border-color);
   box-shadow: 2px 2px 4px 0px var(--input-focus-box-shadow-color);
